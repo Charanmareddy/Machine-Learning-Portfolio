@@ -19,6 +19,7 @@ I am developing and pushing my implementations modularly. Below is the current t
 | Module / Algorithm | Dataset Used | Objective / Target | Status |
 | :--- | :--- | :--- | :--- |
 | [📂 Linear Regression](./Linear_Regression) | Salary & Student Performance | Predict numerical targets using Ordinary Least Squares | ✅ Completed |
+| [📂 Polynomial Regression](./Polynomial_Regression) | Ice Cream Revenue | Preprocess features to capture non-linear relationships | ✅ Completed |
 | 📂 Logistic Regression | *Pending* | *Classification tasks* | ⏳ Upcoming |
 | 📂 Decision Trees & Random Forest | *Pending* | *Supervised learning tasks* | ⏳ Upcoming |
 | 📂 Clustering (K-Means) | *Pending* | *Unsupervised segmentation* | ⏳ Upcoming |
@@ -48,6 +49,12 @@ The active Linear Regression directory contains two distinct practical notebooks
   * **Testing $R^2$ Score:** **`0.9887` (98.87%)**
   * **Root Mean Squared Error (RMSE):** `2.045` marks variance on test splits.
   * **Mean Absolute Error (MAE):** `1.629` marks on test predictions.
+
+### 3. Polynomial Regression: Ice Cream Revenue (`ice_cream.ipynb`)
+* **Objective:** Predict cafe/stand revenue based on the ambient outside temperature.
+* **Key Features:** `Temperature` (Independent Feature), `Revenue` (Dependent/Target).
+* **Engineering Standard:** Utilized Scikit-Learn's `PolynomialFeatures` preprocessing framework. This converts a simple linear array $[x]$ into higher-degree combinations $[1, x, x^2, \dots, x^n]$ to map curvilinear data patterns that standard Ordinary Least Squares (OLS) cannot capture effectively.
+* **Pipeline Goal:** Prevents underfitting by allowing a linear model to natively fit non-linear curves without losing the interpretability of standard regression coefficients.
 
 ---
 
